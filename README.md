@@ -68,6 +68,28 @@ Created 3 pipeilne jobs
 <img width="1439" alt="Screenshot 2023-08-14 at 1 31 39 AM" src="https://github.com/ahsanulhabib93/website/assets/82897817/bac94ab5-193c-444f-93df-c24583fdcfcf">
 
 
+Kubernetes cluster setup:
+-
+
+*install minikube
+
+
+brew install minikube
+minikube start
+minikube status
+
+Install argoCD
+Vim argocd-basic.yml
+Kubectl apply -f argocd-basic.yml
+
+Kubectl get pods -w
+kubectl get svc
+kubectl edit svc example-argocd-server
+*Changed the type to cluster IP to node*
+
+minikube service argocd-server
+minikube service list
+
 Outcome of CICD Pipeline:
 -
 Whenever any changes made on repository the jenkins job will trigger sequentially in queue
